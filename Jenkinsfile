@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'npm install'
+        sh 'export NODE_OPTIONS=--max_old_space_size=1536 && npm install'
       }
     }
 
