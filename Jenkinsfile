@@ -12,6 +12,10 @@ pipeline {
         sh 'export NODE_OPTIONS=--max_old_space_size=1536 && npm install'
       }
     }
-
+    stage('Test') {
+      steps {
+        sh './jenkins/scripts/test.sh'
+      }
+    }
   }
 }
